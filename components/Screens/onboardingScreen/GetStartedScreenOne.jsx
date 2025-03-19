@@ -15,33 +15,24 @@ export default function GetStartedScreen() {
   return (
     <>
       <StatusBar backgroundColor="#1B6F43" barStyle="light-content" />
-      <View style={styles.container}>
+      <View style={[styles.container, { backgroundColor: "#1B6F43" }]}>
         <Image
           source={require("../../../assets/images/kushah.png")}
           style={styles.logo}
         />
-        <Text style={styles.title}> KUSHAH</Text>
-        <Text style={styles.body}>
-          {" "}
+        <Text style={styles.title}>KUSHAH</Text>
+        <Text style={styles.subtitle}>
           Your one best friend and easiest way to success
         </Text>
-
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate("signup")}
         >
-          <Text style={styles.buttonText}>Get Started</Text>
-          <Ionicons
-            name="arrow-forward"
-            size={24}
-            color="#FFFFFF"
-            style={styles.icon}
-          />
+          <Text style={styles.buttonText}>Get Started →</Text>
         </TouchableOpacity>
-
         <Image
           source={require("../../../assets/images/splash.png")}
-          style={styles.get}
+          style={styles.onboardingImage}
         />
       </View>
     </>
@@ -51,18 +42,27 @@ export default function GetStartedScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: "flex-start", 
     alignItems: "center",
-    backgroundColor: "#1B6F43",
-    paddingHorizontal: 20,
+    padding: 20,
+    paddingBottom: 100, 
+  },
+  content: {
+    zIndex: 1, 
+    alignItems: "center",
+  },
+  logo: {
+    width: 100,
+    height: 100,
+    marginBottom: 20,
   },
   title: {
-    fontSize: 32,
-    color: "#FFFFFF",
+    fontSize: 28,
     fontWeight: "bold",
-    marginTop: 20,
-    textAlign: "center",
+    color: "#333",
+    marginBottom: 10,
   },
-  body: {
+  subtitle: {
     fontSize: 20,
     textAlign: "center",
     lineHeight: 28,
@@ -70,22 +70,27 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   button: {
-    flexDirection: "row",
-    alignItems: "center",
     backgroundColor: "#269C5F",
-    paddingVertical: 15,
-    paddingHorizontal: 35,
-    borderRadius: 20,
-    marginBottom: 30,
+    padding: 15,
+    borderRadius: 30,
+    width: "80%",
+    alignItems: "center",
+    marginBottom: 10,
+    borderColor: "#fff",
     borderWidth: 1,
-    borderColor: "#C8C8C8",
-  },
-  icon: {
-    marginLeft: 10,
   },
   buttonText: {
-    color: "#FFFFFF",
+    color: "#fff",
+    fontWeight: "600",
     fontSize: 16,
-    fontWeight: "500",
+  },
+
+  onboardingImage: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    resizeMode: "contain",
   },
 });

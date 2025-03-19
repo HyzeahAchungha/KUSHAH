@@ -1,6 +1,5 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
-import AntDesign from "@expo/vector-icons/AntDesign";
 import { useNavigation } from "expo-router";
 export default function SignupScreen() {
   const navigation = useNavigation();
@@ -13,7 +12,7 @@ export default function SignupScreen() {
       />
       <Text style={styles.title}>EASY WAY TO SUCCESS</Text>
 
-      <Text style={styles.body}>
+      <Text style={styles.subtitle}>
         Get fast access to past HND questions from all years
       </Text>
 
@@ -22,7 +21,10 @@ export default function SignupScreen() {
         onPress={() => navigation.navigate("otp")}
       >
         <Text style={styles.buttonText}>Signup with Google</Text>
-        <AntDesign name="google" size={24} />
+        <Image
+        source={require("../../assets/images/Group.png")}
+        style={styles.auth}
+      />
       </TouchableOpacity>
 
       <TouchableOpacity
@@ -31,7 +33,10 @@ export default function SignupScreen() {
       >
         <Text style={styles.loginText}>Login</Text>
 
-        <AntDesign name="google" size={24} />
+        <Image
+        source={require("../../assets/images/Group.png")}
+        style={styles.auth}
+      />
       </TouchableOpacity>
 
       <Text style={styles.policy}>
@@ -52,14 +57,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",  
   },
   title: {
-    fontSize: 20,
+    fontSize: 24,
     color: "#000",
     fontWeight: "bold",
     marginTop: 25,
     textAlign: "center",
   },
-  body: {
-    fontSize: 18,
+  subtitle: {
+    fontSize: 20,
     textAlign: "center",
     lineHeight: 28,
     color: "#000",
@@ -72,17 +77,15 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 35,
     borderRadius: 20,
-    marginBottom: 10,
+    marginBottom: 15,
     justifyContent: "center",
+    width: "100%",
   },
-  icon: {
-    marginLeft: 12,
-    padding: 10,
-  },
+ 
   buttonText: {
     color: "#FFFFFF",
-    fontSize: 16,
-    fontWeight: "400",
+    fontWeight: '600', 
+    fontSize: 18,
     marginRight: 10,
   },
   login: {
@@ -95,15 +98,16 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#C8C8C8",
     justifyContent: "center",
+    width: "100%",
   },
   loginText: {
     color: "#000",
-    fontSize: 16,
-    fontWeight: "400",
+    fontWeight: '600',
+     fontSize: 18,
     marginRight: 10,
   },
   policy: {
-    fontSize: 12,
+    fontSize: 14,
     textAlign: "center",
     lineHeight: 18,
     color: "#000",
@@ -120,4 +124,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
+  
 });

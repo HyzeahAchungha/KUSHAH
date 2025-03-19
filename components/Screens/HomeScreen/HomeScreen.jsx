@@ -19,19 +19,21 @@ const schools = [
         id: "1",
         name: "Computer Engineering",
         courses: [
-          { id: "1", name: "Data Structures",
-            "questions": [
+          {
+            id: "1",
+            name: "Data Structures",
+            questions: [
               "What is a linked list?",
               "Explain binary trees.",
-              "Define hash tables."
+              "Define hash tables.",
             ],
-            "questions": [
+            questions: [
               "What is a linked list?",
               "Explain binary trees.",
-              "Define hash tables."
-            ]
+              "Define hash tables.",
+            ],
           },
-          
+
           { id: "2", name: "Algorithms" },
           { id: "3", name: "Operating Systems" },
         ],
@@ -43,7 +45,6 @@ const schools = [
           { id: "1", name: "Circuit Analysis" },
           { id: "2", name: "Digital Electronics" },
           { id: "3", name: "Power Systems" },
-          
         ],
       },
       {
@@ -56,15 +57,14 @@ const schools = [
         ],
       },
     ],
-
   },
   {
     id: "2",
-    name: "School 2",
+    name: " Computer Eng",
     departments: [
       {
         id: "1",
-        name: "Business Administration",
+        name: "Hardware Maintenance",
         courses: [
           { id: "1", name: "Accounting Principles" },
           { id: "2", name: "Marketing Strategies" },
@@ -73,7 +73,49 @@ const schools = [
       },
       {
         id: "2",
-        name: "Marketing",
+        name: "Software Engineering",
+        courses: [
+          { id: "1", name: "Case Study" },
+          { id: "2", name: "Mathemathics" },
+          { id: "3", name: "Digital Electronics" },
+          { id: "4", name: "Data Structure and Algorithm  " },
+          { id: "5", name: "Project Management " },
+          { id: "6", name: "Object Oriented Programming" },
+          { id: "7", name: "Networks and System Management" },
+          { id: "8", name: "Economics & Business Management" },
+          { id: "9", name: "Web Development" },
+        ],
+      },
+      {
+        id: "3",
+        name: "Computer Science & Networks",
+        courses: [
+          { id: "1", name: "Consumer Behavior" },
+          { id: "2", name: "Digital Marketing" },
+          { id: "3", name: "Brand Management" },
+        ],
+      },
+      {
+        id: "4",
+        name: "E-Commerce & Digital Marketing ",
+        courses: [
+          { id: "1", name: "Consumer Behavior" },
+          { id: "2", name: "Digital Marketing" },
+          { id: "3", name: "Brand Management" },
+        ],
+      },
+      {
+        id: "5",
+        name: "Database Management ",
+        courses: [
+          { id: "1", name: "Consumer Behavior" },
+          { id: "2", name: "Digital Marketing" },
+          { id: "3", name: "Brand Management" },
+        ],
+      },
+      {
+        id: "6",
+        name: "Computer Graphics & Web Design",
         courses: [
           { id: "1", name: "Consumer Behavior" },
           { id: "2", name: "Digital Marketing" },
@@ -82,12 +124,32 @@ const schools = [
       },
     ],
   },
-  { id: "3", name: "School 3", departments: [] }, // Add departments here
-  { id: "4", name: "School 4", departments: [] },
-  { id: "5", name: "School 5", departments: [] }, // Add departments here
-  { id: "6", name: "School 6", departments: [] },
-  { id: "7", name: "School 7", departments: [] }, // Add departments here
-  { id: "8", name: "School 8", departments: [] },
+  { id: "3", name: "Computer & Communication Engineering", departments: [
+    {
+      id: "1",
+      name: "Business Administration",
+      courses: [
+        { id: "1", name: "Accounting Principles" },
+        { id: "2", name: "Marketing Strategies" },
+        { id: "3", name: "Organizational Behavior" },
+      ],
+    },
+    {
+      id: "2",
+      name: "Marketing",
+      courses: [
+        { id: "1", name: "Consumer Behavior" },
+        { id: "2", name: "Digital Marketing" },
+        { id: "3", name: "Brand Management" },
+      ],
+    },
+  ], }, 
+
+  { id: "4", name: " School of Health Sciences", departments: [] },
+  { id: "5", name: "Networks & Telecommunications ", departments: [] }, // Add departments here
+  { id: "6", name: "Electrical and Electronics Engineering", departments: [] },
+  { id: "7", name: " Civil and Structural Engineering", departments: [] }, // Add departments here
+  { id: "8", name: "Networks & Telecommunications .", departments: [] },
 ];
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -109,8 +171,7 @@ export default function HomeScreen() {
     <View style={styles.container}>
       {/* Header Section */}
       <View style={styles.header}>
-        
-        <TouchableOpacity onPress={() =>navigation.toggleDrawer()}>
+        <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
           <Ionicons name="menu" size={24} color="white" />
         </TouchableOpacity>
 

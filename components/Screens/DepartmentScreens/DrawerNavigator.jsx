@@ -4,8 +4,8 @@ import HomeScreen from "../HomeScreen/HomeScreen";
 import AskKushahAiScreen from "../AskKushahAiScreen/AskKushahAiScreen";
 import AboutUsScreen from "../AboutUsScreen/AboutUsScreen";
 import PrivacyPolicyScreen from "../PrivacyPolicyScreen/PrivacyPolicyScreen";
-import LogOut from "../Logout/LogOut"
 import CustomDrawer from "./CustomDrawer";
+import FeedBackScreen from "../FeedBack/FeedBackScreen";
 
 const Drawer = createDrawerNavigator();
 
@@ -19,7 +19,7 @@ const DrawerNavigator = () => {
       <Drawer.Screen name="AskKushahAI" component={AskKushahAiScreen} />
       <Drawer.Screen name="AboutUs" component={AboutUsScreen} />
       <Drawer.Screen name="PrivacyPolicy" component={PrivacyPolicyScreen} />
-      <Drawer.Screen name="Logout" component={LogOut} />
+      <Drawer.Screen name="Feedback" component={FeedBackScreen} />
     </Drawer.Navigator> 
   );
 };

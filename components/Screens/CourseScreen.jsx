@@ -75,23 +75,7 @@ export default function CourseScreen({ route, navigation }) {
         </TouchableOpacity>
       </View>
 
-      {/* Picker Dropdown */}
-      {/* <View style={styles.pickerContainer}>
-        <View style={styles.pickerBox}>
-          <Picker
-            selectedValue={selectedYear}
-            style={styles.picker}
-            onValueChange={(itemValue) => setSelectedYear(itemValue)}
-          >
-            {Array.from(
-              { length: 2024 - 2015 + 1 },
-              (_, index) => 2015 + index
-            ).map((year) => (
-              <Picker.Item key={year} label={`${year}`} value={`${year}`} />
-            ))}
-          </Picker>
-        </View>
-      </View> */}
+      
      <View style={styles.pickerContainer}>
         <View style={styles.pickerBox}>
           <Picker
